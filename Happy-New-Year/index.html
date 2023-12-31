@@ -1,31 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HAPPY NEW YEAR </title>
-        <link rel="stylesheet" type="text/css" href="new.css">
-    </head>
 
+<head>
+    <title>HAPPY NEW YEAR </title>
+    <link rel="stylesheet" type="text/css" href="new.css">
+    <style>
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    <button onclick="startAudio()">Play Audio</button>
-<audio id="backgroundAudio" loop>
-    <source src="music/musicc.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
-<script>
-    function startAudio() {
-        var audio = document.getElementById('backgroundAudio');
-        audio.play();
-    }
-</script>
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="toggleAudio()">Play Audio</button>
+    <audio id="backgroundAudio" loop>
+        <source src="music/musicc.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById('backgroundAudio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+            updateButton();
+        }
+
+        function updateButton() {
+            var audio = document.getElementById('backgroundAudio');
+            var button = document.querySelector('button');
+            if (audio.paused) {
+                button.textContent = 'Play Audio';
+            } else {
+                button.textContent = 'Pause Audio';
+            }
+        }
+    </script>
 
     <h1><u>H</u>&nbsp<u>A</u>&nbsp<u>P</u>&nbsp<u>P</u>&nbsp<u>Y</u></h1>
     <h2><u>New</u>&nbsp&#10084;&#65039;&nbsp<u>Year</u></h2>
     <h3><u>2</u>&nbsp<u>0</u>&nbsp<u>2</u>&nbsp<u>4</u></h3>
     <h4><a href="https://instagram.com/rahulsingh73679/" target="_blank">MADE By Rahul Singh </a></h4>
-    <h5>"Wishing you a joyful New Year filled with love, laughter, and new beginnings. May each day bring you success, peace, and moments of pure happiness. Cheers to a year of growth and prosperity!"</h5>
-
 
     <canvas id="birthday"></canvas>
-<script src="new.js"></script>
-</html>
+    <h5>"Wishing you a joyful New Year filled with love, laughter, and new beginnings. May each day bring you success,
+        peace, and moments of pure happiness. Cheers to a year of growth and prosperity!"</h5>
 
+    <script src="new.js"></script>
+</body>
+
+</html>
