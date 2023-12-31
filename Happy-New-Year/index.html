@@ -6,17 +6,19 @@
     <link rel="stylesheet" type="text/css" href="new.css">
     <style>
         button {
-            font-size: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            font-size: 26.67px; /* Reduced by 1/3 */
+            padding: 13.33px 26.67px; /* Reduced by 1/3 */
+            background-color: skyblue;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            display: block;
+            margin: 0 auto;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #87CEEB; /* Lighter shade of sky blue */
         }
     </style>
 </head>
@@ -24,6 +26,19 @@
 <body>
 
     <button onclick="toggleAudio()">Play Audio</button>
+
+    <h1><u>H</u>&nbsp<u>A</u>&nbsp<u>P</u>&nbsp<u>P</u>&nbsp<u>Y</u></h1>
+    <h2><u>New</u>&nbsp&#10084;&#65039;&nbsp<u>Year</u></h2>
+    <h3><u>2</u>&nbsp<u>0</u>&nbsp<u>2</u>&nbsp<u>4</u></h3>
+    <h4><a href="https://instagram.com/rahulsingh73679/" target="_blank">MADE By Rahul Singh </a></h4>
+
+    <canvas id="birthday"></canvas>
+
+    <h5>"Wishing you a joyful New Year filled with love, laughter, and new beginnings. May each day bring you success,
+        peace, and moments of pure happiness. Cheers to a year of growth and prosperity!"</h5>
+
+    <button onclick="toggleAudio()">Play Audio</button>
+
     <audio id="backgroundAudio" loop>
         <source src="music/musicc.mp3" type="audio/mp3">
         Your browser does not support the audio element.
@@ -49,15 +64,6 @@
             }
         }
     </script>
-
-    <h1><u>H</u>&nbsp<u>A</u>&nbsp<u>P</u>&nbsp<u>P</u>&nbsp<u>Y</u></h1>
-    <h2><u>New</u>&nbsp&#10084;&#65039;&nbsp<u>Year</u></h2>
-    <h3><u>2</u>&nbsp<u>0</u>&nbsp<u>2</u>&nbsp<u>4</u></h3>
-    <h4><a href="https://instagram.com/rahulsingh73679/" target="_blank">MADE By Rahul Singh </a></h4>
-
-    <canvas id="birthday"></canvas>
-    <h5>"Wishing you a joyful New Year filled with love, laughter, and new beginnings. May each day bring you success,
-        peace, and moments of pure happiness. Cheers to a year of growth and prosperity!"</h5>
 
     <script src="new.js"></script>
 </body>
